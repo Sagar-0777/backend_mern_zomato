@@ -1,4 +1,4 @@
-const express = require('express'); 
+const express = require('express');
 const foodController = require("../controllers/food.controller")
 const authMiddleware = require("../middlewares/auth.middleware")
 const router = express.Router();
@@ -28,7 +28,7 @@ router.post('/like',
     foodController.likeFood
 )
 
-router.post('save',
+router.post('/save',
     authMiddleware.authUserMiddleware,
     foodController.saveFood
 )
