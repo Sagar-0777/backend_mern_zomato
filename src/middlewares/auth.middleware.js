@@ -1,6 +1,7 @@
 const foodPartnerModel = require("../models/foodpartner.model");
 const jwt = require('jsonwebtoken');
 const userModel = require("../models/user.model");
+const bcrypt = require("bcrypt");
 
 async function authFoodPartnerMiddleware(req, res, next) {
     const token = req.cookies.token; // ✅ FIXED: use req.cookies instead of res.cookies
